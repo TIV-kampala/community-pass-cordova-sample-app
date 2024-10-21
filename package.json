@@ -1,0 +1,43 @@
+{
+  "name": "com.cordovareact",
+  "homepage": "./",
+  "displayName": "CordovaReact",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-app": "cd react-app && npm run build && cd .. && rm -rf www && mkdir www && cp -r react-app/build/* www",
+    "android": "npm run clean && npx cordova platform add android && npm run react-app && npx cordova run android --device --buildConfig",
+    "clean": "rm -rf platforms && rm -rf plugins"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "com.lampa.startapp": "^6.1.6",
+    "cordova-android": "^13.0.0",
+    "cordova-compass-utils-plugin": "github:TIV-kampala/compass-cordova-android-utils-plugin"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "com-darryncampbell-cordova-plugin-intent": {},
+      "cordova-compass-utils-plugin": {},
+      "com.lampa.startapp": {}
+    }
+  },
+  "dependencies": {
+    "@awesome-cordova-plugins/core": "^6.3.0",
+    "@awesome-cordova-plugins/web-intent": "^6.3.0",
+    "buffer": "^6.0.3",
+    "com-darryncampbell-cordova-plugin-intent": "^2.2.0",
+    "react-json-tree": "^0.19.0",
+    "react-json-view": "^1.21.3",
+    "rxjs": "^7.3.0"
+  }
+}

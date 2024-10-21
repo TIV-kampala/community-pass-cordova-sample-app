@@ -1,0 +1,18 @@
+{
+  "android": {
+    "debug": {
+      "keystore": "./com.tiv.cp.keystore",
+      "storePassword": "android",
+      "alias": "androiddebugkey",
+      "password": "android",
+      "keystoreType": ""
+    },
+    "release": {
+      "keystore": "./com.tiv.cp.keystore",
+      "storePassword": "android",
+      "alias": "androiddebugkey",
+      "password": "android",
+      "keystoreType": ""
+    }
+  }
+}
