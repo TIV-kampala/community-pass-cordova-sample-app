@@ -134,7 +134,7 @@ export class compassHelperClass {
     }
 
     private async executeUnifiedApiRequest(requestCode: string, requestData: string): Promise<any> {
-        const [result, cpError] = await this.startIntentUsingLampaa(requestCode, requestData);
+        const [result, cpError] = await this.startIntentUsingWebIntent(requestCode, requestData);
 
         console.log("intent result: ", JSON.stringify(result ?? ''), JSON.stringify(cpError ?? ''));
 
